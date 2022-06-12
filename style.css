@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Tamil&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+body {
+  margin: auto;
+}
+
+h1 {
+  font-family: "Tiro Tamil";
+  color: #34cdfe;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Kdam Thmor Pro";
+  text-align: center;
+}
+
+h3 {
+  font-family: "Lemon";
+  color: #b491c8;
+  text-align: center;
+}
+
+p {
+  font-family: "Merriweather";
+  text-align: center;
+}
+
+span {
+  font-family: "Merriweather";
+}
+
+ul {
+  font-family: "Merriweather";
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  width: 100%;
+  margin: auto;
+  transition-property: width;
+  transition-duration: 1s;
+}
+
+header {
+  display: flex;
+  background-color: #eeeeee;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid #34cdfe;
+}
+
+header svg {
+  padding-top: 10px;
+}
+
+header .logo {
+  max-width: 100px;
+  padding: 0px;
+  margin: auto;
+}
+
+header .twitter {
+  float: left;
+  max-width: 24px;
+  margin-right: 5px;
+}
+
+header .linkedin {
+  float: left;
+  margin-right: 5px;
+}
+
+header .instagram {
+  float: left;
+  max-width: 24px;
+}
+
+header .menu {
+  float: right;
+  margin-top: 5px;
+  margin-left: 10%;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#f_1 {
+  margin-top: 10%;
+  background-color: #eeeeee;
+}
+
+#f_3 {
+  background-color: #eeeeee;
+}
+
+.bio {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 0px 15px 15px 15px;
+}
+
+.bio p {
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+footer {
+  background-color: #eeeeee;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid #34cdfe;
+}
+
+footer p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.email {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Merriweather";
+  text-align: center;
+  text-decoration: none;
+  color: #b491c8;
+}
+
+.email:visited {
+  color: #b491c8;
+}
+
+.email:link {
+  color: #b491c8;
+}
+
+.tagline {
+  overflow: hidden;
+  margin: auto;
+  object-fit: fill;
+  animation-name: animation;
+  animation-duration: 3s;
+}
+
+.tagline h3 {
+  width: 340px;
+  margin: auto;
+}
+
+@keyframes animation {
+  0% {
+    width: 1px;
+  }
+  100% {
+    width: 350px;
+  }
+}
+
+img:hover {
+  width: 105%;
+}
+
+@media (min-width: 415px) {
+  body {
+    display: grid;
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    grid-template-areas: "head head head head head" "top top top top top" ". ul1 . ul2 ." ". feature1 . feature2 ." ". feature3 . feature4 ." "footer footer footer footer footer";
+  }
+  header {
+    grid-area: head;
+  }
+  .top {
+    grid-area: top;
+  }
+  ul {
+    margin: auto;
+  }
+  .ul1 {
+    grid-area: ul1;
+  }
+  .ul2 {
+    grid-area: ul2;
+  }
+  #f_1 {
+    margin-top: auto;
+    grid-area: feature1;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #f_2 {
+    grid-area: feature2;
+  }
+  #f_3 {
+    grid-area: feature3;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #f_4 {
+    grid-area: feature4;
+  }
+  footer {
+    grid-area: footer;
+  }
+  header .menu {
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 850px) {
+  body {
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-areas: "head head head head head" "top top top top top" ". ul1 . ul2 ." ". feature1 feature2 feature3 ." ". feature4 feature4 feature4 ." "footer footer footer footer footer";
+  }
+  header .menu {
+    margin-left: 3%;
+  }
+}
